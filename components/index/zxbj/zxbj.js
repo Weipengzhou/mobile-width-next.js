@@ -17,10 +17,8 @@ class Form extends React.Component {
 
     submit = () => {
         this.props.form.validateFields((error, value) => {
-            if(JSON.stringify(value.district)==JSON.stringify(["请选择", "请选择", "请选择"])){
-                Toast.fail('请选择您的城市 !!!', 1);
-            }else if(value.area==''){
-                Toast.fail('请输入您的房屋面积 !!!', 1);
+           if(value.area==''){
+                Toast.fail('请输入您的姓名 !!!', 1);
             }else if(!value.phone.match(/^1[0-9]{10}$/)){
                 Toast.fail('请输入正确的手机号码 !!!', 1);
             }else{
@@ -44,24 +42,8 @@ class Form extends React.Component {
         return (
             <div>
                 <div className='index-form'>
-                    <div className='form-list-box'>
-                        <span className='city'></span>
-                        <Picker
-                            visible={this.state.visible}
-                            data={district}
-                            value={this.state.pickerValue}
-                            onChange={v => this.setState({ pickerValue: v })}
-                            onOk={() => this.setState({ visible: false })}
-                            onDismiss={() => this.setState({ visible: false })}
-                            {...getFieldProps('district', {
-                                initialValue: ['请选择', '请选择', '请选择'],
-                              })}
-                        >
-                            <List.Item extra={this.getSel()} onClick={() => this.setState({ visible: true })}>
-
-                            </List.Item>
-                        </Picker></div>
-                    <div className='form-list-box'><span className='area'></span><input {...getFieldProps('area',{ initialValue: ''})} placeholder='您的房屋面积' /></div>
+                   
+                    <div className='form-list-box'><span className='area'></span><input {...getFieldProps('area',{ initialValue: ''})} placeholder='您的姓名' /></div>
                     <div className='form-list-box'><span className='phone'></span><input {...getFieldProps('phone',{ initialValue: ''})} placeholder='输入手机号码获取报价结果' /></div>
                     <button onClick={this.submit}>立即获取</button>
                 </div>

@@ -28,10 +28,8 @@ class BottomNav extends Component {
     submit = (e) => {
         this.props.form.validateFields((error, value) => {
 
-            if (JSON.stringify(value.district) == JSON.stringify(["请选择", "请选择", "请选择"])) {
-                Toast.fail('请选择您的城市 !!!', 1);
-            } else if (value.area == '') {
-                Toast.fail('请输入您的房屋面积 !!!', 1);
+            if (value.area == '') {
+                Toast.fail('请输入您的姓名 !!!', 1);
             } else if (!value.phone.match(/^1[0-9]{10}$/)) {
                 Toast.fail('请输入正确的手机号码 !!!', 1);
             } else {
@@ -46,7 +44,7 @@ class BottomNav extends Component {
         });
     }
     show = (e) => {
-        console.log(e)
+
         this.setState({ bg: true })
         if (e == 1) {
             this.setState({ one: true })
@@ -92,25 +90,8 @@ class BottomNav extends Component {
                             <img src="/static/img/tu_08.png" />
                         </div>
                         <div className='mfsj-form'>
-                            <div className='row'>
-
-                                <span className='city'>房屋所在地</span>
-                                <Picker
-                                    visible={this.state.visible}
-                                    data={district}
-                                    value={this.state.pickerValue}
-                                    onChange={v => this.setState({ pickerValue: v })}
-                                    onOk={() => this.setState({ visible: false })}
-                                    onDismiss={() => this.setState({ visible: false })}
-                                    {...getFieldProps('district', {
-                                        initialValue: ['请选择', '请选择', '请选择'],
-                                    })}
-                                >
-                                    <List.Item extra={this.getSel()} onClick={() => this.setState({ visible: true })}>
-
-                                    </List.Item>
-                                </Picker></div>
-                            <div className='row'><span className='area'>房屋面积</span><input {...getFieldProps('area', { initialValue: '' })} placeholder='您的房屋面积' /></div>
+                            
+                            <div className='row'><span className='area'>姓名</span><input {...getFieldProps('area', { initialValue: '' })} placeholder='您的姓名' /></div>
 
 
                             <div className='row'><span className='phone'>联系方式</span><input {...getFieldProps('phone', { initialValue: '' })} placeholder='请输入您的手机号码' /></div>

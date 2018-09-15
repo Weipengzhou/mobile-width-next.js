@@ -217,6 +217,18 @@ app.prepare().then(() => {
       app.render(req, res, actualPage, queryParams)
     })
   
+    //提交成功
+    server.get('/success', (req, res) => {
+
+      const actualPage = '/success'
+     
+      const queryParams = {
+        id: req.params.id,
+      }
+  
+   
+      app.render(req, res, actualPage, queryParams)
+    })
   //公司详情页
   server.get('/:id/gs/:key([0-9]+)', (req, res) => {
 

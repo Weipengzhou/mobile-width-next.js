@@ -57,7 +57,7 @@ function* submitBaojia({ text }) {
     try {
         const result = yield call(apis.submitBaojia, text);
         if (result.status == 1) {
-            Toast.success('报价成功，请耐心等待!!!', 1);
+            yield put(Router.push('/success'))
         } else {
             Toast.fail('验证码错误 !!!', 1);
         }
