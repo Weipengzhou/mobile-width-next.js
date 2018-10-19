@@ -66,7 +66,7 @@ class  Index extends Component {
        const domain =this.props.shows?this.props.shows.domain:'/'
     return (
         <div className='cityChose'>
-            <Head title="金蚂蚁装修网手机端_推荐口碑好的装修公司免费室内装修报价,装修价格,装修设计,效果图" description='金蚂蚁装修网手机端（m.zxjmy.com）致力于为全国装修业主打造一个良好的互联网装修平台并为业主推荐口碑好的装修公司免费提供室内装修报价,效果图'  url={'www.zxjmy.com'}/>
+            <Head title="金蚂蚁装修网手机端_推荐口碑好的装修公司免费室内装修报价,室内装修效果图大全,房子装修设计图片大全" description='金蚂蚁装修网手机端（m.zxjmy.com）致力于为全国装修业主打造一个良好的互联网装修平台并为业主推荐口碑好的装修公司免费提供室内装修报价,室内装修效果图大全,房子装修设计图片大全.'  url={'www.zxjmy.com'}/>
             <Nav title="切换城市" navUrl={`/`}><a style={{ color: '#333', fontSize: '14px' }}  onClick={()=>(window.history.back())}><Icon type="left"  size='md'/> </a></Nav>
             <div className='citypage' style={{marginBottom:'0.2rem'}}>
                 <div className='current-city'>
