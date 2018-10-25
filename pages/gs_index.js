@@ -31,7 +31,7 @@ class GsIndex extends Component {
                             <img src={`http://www.zxjmy.com${companies.company_logo}`} alt={companies.name}/>
                         </div>
                         <div className='info'>
-                            <h2>{companies.name}</h2>
+                            <h1>{companies.name}</h1>
                             <p>口碑值:{companies.public_praise}</p>
                             <span className='score'></span>
                         </div>
@@ -45,7 +45,7 @@ class GsIndex extends Component {
 
                 </div>
                 <div className='case'>
-                    <p className="title">装修案例<Link href={`/${this.props.id}/gs/${this.props.ojbkey}/anli`}><a >更多></a></Link></p>
+                <h2 style={{fontWeight:'500'}}> <p className="title">装修案例<Link href={`/${this.props.id}/gs/${this.props.ojbkey}/anli`}><a >更多></a></Link></p></h2>
                     <div className='case-show'>
                         <ul className='clearfix case-slide'>
                         {this.props.shows.cases.map((e, index) => (
@@ -84,7 +84,7 @@ class GsIndex extends Component {
                                     <Link href={`/${this.props.id}/gs/${this.props.ojbkey}/gongdi/${e.id}`}>
                                         <a>
                                             <div className='img'>
-                                                <img src={`http://www.zxjmy.com${e.path}`} alt={e.housing_estate} />
+                                               <img src={`http://www.zxjmy.com${e.path}`} alt={e.housing_estate} />
                                             </div>
                                             <div className='info'>
 
@@ -111,7 +111,7 @@ class GsIndex extends Component {
 
                 </div>
                 <div className='about'>
-                    <p className="title">公司信息<Link href={`/${this.props.id}/gs/${this.props.ojbkey}/jieshao`}><a>更多></a></Link></p>
+                   <p className="title">公司信息<Link href={`/${this.props.id}/gs/${this.props.ojbkey}/jieshao`}><a>更多></a></Link></p>
                     <p className='content'>
                        {companies.intro}   </p>
                 </div>

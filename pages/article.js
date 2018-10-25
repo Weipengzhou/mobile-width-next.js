@@ -68,9 +68,11 @@ class Article  extends Component{
                     <a href="#" className="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
                 </div>
                 <div className="bottom">
-                    <span>声明：本文发自金蚂蚁装修网，如本站文章和转稿涉及版权等问题，请作者及时联系本站，我们会尽快处理。</span>
+                   <h2 style={{fontWeight:'500',fontSize:'12px'}}>
+                   <span>声明：本文发自金蚂蚁装修网，如本站文章和转稿涉及版权等问题，请作者及时联系本站，我们会尽快处理。</span>
                     <span> 标题：装修合同注意事项，不看会后悔！</span>
                     <a href={`/a/${articles.article.id}`}> 本文地址：http://m.zxjmy.com/a/{articles.article.id}</a>
+                   </h2>
                 </div>
               
                 <div className='tj'>
