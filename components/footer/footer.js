@@ -3,7 +3,7 @@ import footer from './footer.less'
 
 const Footer=()=>(<footer>
         <div className='hotCity'>
-            <h2>热门城市</h2>
+            <div className='cc'>热门城市</div>
             <Link as={`/beijing`} href={`/shouye?id=beijing`}><a>北京</a></Link>
             <Link as={`/shanghai`} href={`/shouye?id=shanghai`}><a>上海</a></Link>
             <Link as={`/guangzhou`} href={`/shouye?id=guangzhou`}><a>广州</a></Link>
