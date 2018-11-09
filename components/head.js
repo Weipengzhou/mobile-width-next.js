@@ -29,15 +29,7 @@ const Head = (props) => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" /> */}
-    <script>
-      {` var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6f3aef8faa233258d8880a4b7a489db0";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();   `}
-    </script>
+    <script src="https://s5.cnzz.com/z_stat.php?id=1275304695&web_id=1275304695" language="JavaScript"></script>
   </NextHead>
 
 )
